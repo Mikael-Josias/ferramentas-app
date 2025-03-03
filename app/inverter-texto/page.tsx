@@ -23,8 +23,8 @@ export default function InvertText() {
           .
         </span>
       </div>
-      <div className="flex flex-col gap-3">
-        <div>
+      <div className="flex flex-col md:flex-row gap-3">
+        <div className="w-full">
           <span className="text-base text-gray-600">Texto base:</span>
           <Textarea
             className="text-base text-black h-80 resize-none outline-blue-50"
@@ -38,7 +38,7 @@ export default function InvertText() {
             Inverter Texto
           </Button>
         </div>
-        <div>
+        <div className="w-full">
           <span className="text-base text-gray-600">Resultado:</span>
           <Textarea
             className="text-base text-black h-80 resize-none outline-blue-50"
