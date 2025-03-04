@@ -30,6 +30,12 @@ export default function Header() {
         >
           Inverter Texto
         </Link>
+        <Link
+          href="maiuscula-minuscula"
+          className="text-base text-gray-600 font-semibold py-1 px-2 hover:bg-blue-50 rounded-md transition-colors"
+        >
+          Converter Maiúscula/Minúscula
+        </Link>
       </nav>
 
       {/* MOBILE */}
@@ -52,13 +58,20 @@ export default function Header() {
         >
           <X className="text-gray-600 cursor-pointer" />
         </button>
-        <nav className="mt-10 space-y-4">
+        <nav className="mt-10 space-y-4 flex flex-col">
           <Link
             href="/inverter-texto"
             className="text-base text-gray-600"
             onClick={() => setIsOpen(false)}
           >
             Inverter Texto
+          </Link>
+          <Link
+            href="/maiuscula-minuscula"
+            className="text-base text-gray-600"
+            onClick={() => setIsOpen(false)}
+          >
+            Converter Maiúscula/Minúscula
           </Link>
         </nav>
       </div>
