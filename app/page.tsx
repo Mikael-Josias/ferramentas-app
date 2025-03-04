@@ -1,18 +1,10 @@
 import { ArrowDownZA } from "lucide-react";
 import Link from "next/link";
 
-const TOOLS_LINKS = [
-  {
-    type: "text",
-    name: "Inverter Texto",
-    link: "/inverter-texto",
-  },
-];
-
 export default function Home() {
   return (
-    <main className="px-5 md:px-10 py-20">
-      <section className="w-full flex flex-col gap-6">
+    <main className="px-5 md:px-10 py-20 bg-gray-50">
+      <section className="w-full flex flex-col gap-6 p-12 bg-white rounded-4xl">
         <h4 className="text-xl text-black font-bold block">
           Ferramentas de Texto
         </h4>
