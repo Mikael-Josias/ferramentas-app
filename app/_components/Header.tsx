@@ -9,17 +9,19 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="flex items-center justify-between px-5 md:px-10 py-5 shadow-sm">
-      <div className="flex gap-3 items-center">
-        <Image
-          src={Logo}
-          alt="chave de fenda e chave de boca cruzadas em um X"
-          className="w-12 md:w-16 h-auto select-none pointer-events-none"
-        />
-        <span className="text-lg md:text-2xl text-gray-600 font-black leading-[18px] md:leading-[24px]">
-          Ferramentas
-          <br />
-          App
-        </span>
+      <div>
+        <Link href="/" className="flex gap-3 items-center">
+          <Image
+            src={Logo}
+            alt="chave de fenda e chave de boca cruzadas em um X"
+            className="w-12 md:w-16 h-auto select-none pointer-events-none"
+          />
+          <span className="text-lg md:text-2xl text-gray-600 font-black leading-[18px] md:leading-[24px]">
+            Ferramentas
+            <br />
+            App
+          </span>
+        </Link>
       </div>
       <nav className="gap-3 hidden md:flex">
         <Link
@@ -51,7 +53,11 @@ export default function Header() {
           <X className="text-gray-600 cursor-pointer" />
         </button>
         <nav className="mt-10 space-y-4">
-          <Link href="/inverter-texto" className="text-base text-gray-600">
+          <Link
+            href="/inverter-texto"
+            className="text-base text-gray-600"
+            onClick={() => setIsOpen(false)}
+          >
             Inverter Texto
           </Link>
         </nav>
