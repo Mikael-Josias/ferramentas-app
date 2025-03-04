@@ -13,7 +13,7 @@ export default function Header() {
         <Image
           src={Logo}
           alt="chave de fenda e chave de boca cruzadas em um X"
-          className="w-12 md:w-16 h-auto"
+          className="w-12 md:w-16 h-auto select-none pointer-events-none"
         />
         <span className="text-lg md:text-2xl text-gray-600 font-black leading-[18px] md:leading-[24px]">
           Ferramentas
