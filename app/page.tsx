@@ -8,7 +8,7 @@ export default function Home() {
         <h4 className="text-xl text-black font-bold block">
           Ferramentas de Texto
         </h4>
-        <div className="flex gap-3 justify-start">
+        <div className="flex flex-col md:flex-row  gap-3 justify-start">
           <Link
             href="/inverter-texto"
             className="flex flex-col items-center rounded-lg py-8 px-4 text-base text-gray-600 font-semibold w-full sm:w-[49%] md:w-[24%] bg-blue-50 hover:bg-blue-100 transition-colors text-center"
