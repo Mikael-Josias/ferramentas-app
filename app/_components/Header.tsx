@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="flex items-center justify-between px-5 md:px-10 py-5 shadow-sm">
+    <header className="flex items-center justify-between px-5 md:px-10 py-1 shadow-sm border-b-4 border-b-blue-500">
       <div>
         <Link href="/" className="flex gap-3 items-center">
           <Image
