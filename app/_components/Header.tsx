@@ -73,6 +73,13 @@ export default function Header() {
           >
             Converter Maiúscula/Minúscula
           </Link>
+          <Link
+            href="/encontrar-alterar"
+            className="text-base text-gray-600"
+            onClick={() => setIsOpen(false)}
+          >
+            Encontrar e Alterar Texto
+          </Link>
         </nav>
       </div>
     </header>

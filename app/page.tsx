@@ -3,6 +3,7 @@ import Link from "next/link";
 import TextToolsSVG from "./_assets/text-tools.svg";
 import InvertTextIcon from "./_assets/invert-text.svg";
 import UpperLower from "./_assets/upper-to-lower.svg";
+import FindReplace from "./_assets/find-replace.svg";
 
 export default function Home() {
   return (
@@ -52,6 +53,25 @@ export default function Home() {
               </span>
               <span className="text-sm font-normal text-gray-600">
                 converta para maiúsculo, minúsculo ou a primeira letra
+              </span>
+            </div>
+          </Link>
+          <Link
+            href="/encontrar-alterar"
+            className="flex gap-3 p-1 items-start rounded-sm hover:bg-gray-50 transition-colors"
+          >
+            <Image
+              src={FindReplace}
+              width={40}
+              height={40}
+              alt="encontrar e alterar icone"
+            />
+            <div className="flex flex-col gap-0">
+              <span className="text-base font-bold text-gray-800">
+                Encontrar e Alterar Texto
+              </span>
+              <span className="text-sm font-normal text-gray-600">
+                encontre e altere palavras em um texto
               </span>
             </div>
           </Link>
