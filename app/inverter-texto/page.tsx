@@ -35,8 +35,8 @@ export default function InvertText() {
   }
 
   return (
-    <main className="px-2 md:px-10 py-10 md:py-20 bg-gray-50">
-      <section className="flex flex-col gap-6 md:px-10 p-6 md:p-12 bg-white rounded-xl md:rounded-4xl">
+    <main className="px-5 md:px-10 py-10 bg-gray-100">
+      <section className="w-full flex flex-col gap-8 p-5 bg-white md:px-10 md:p-12">
         <div>
           <h1 className="text-xl text-black font-bold">Inverter Texto</h1>
           <span className="text-sm text-gray-600">
