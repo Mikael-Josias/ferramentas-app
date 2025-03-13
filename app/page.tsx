@@ -111,7 +111,7 @@ export default function Home() {
             </div>
           </Link>
           <Link
-            href="/maiuscula-minuscula"
+            href="/bhaskara"
             className="flex gap-3 p-1 items-start rounded-sm hover:bg-gray-50 transition-colors"
           >
             <Image
