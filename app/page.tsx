@@ -130,7 +130,7 @@ export default function Home() {
             </div>
           </Link>
           <Link
-            href="/encontrar-alterar"
+            href="/porcentagem"
             className="flex gap-3 p-1 items-start rounded-sm hover:bg-gray-50 transition-colors"
           >
             <Image
