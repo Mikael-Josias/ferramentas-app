@@ -4,6 +4,12 @@ import Logo from "../icon.png";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,19 +29,51 @@ export default function Header() {
           </span>
         </Link>
       </div>
-      <nav className="gap-3 hidden md:flex">
-        <Link
-          href="inverter-texto"
-          className="text-base text-gray-600 font-semibold py-1 px-2 hover:bg-blue-50 rounded-md transition-colors"
-        >
-          Inverter Texto
-        </Link>
-        <Link
-          href="maiuscula-minuscula"
-          className="text-base text-gray-600 font-semibold py-1 px-2 hover:bg-blue-50 rounded-md transition-colors"
-        >
-          Converter Maiúscula/Minúscula
-        </Link>
+      <nav className="gap-6 hidden md:flex">
+        <DropdownMenu>
+          <DropdownMenuTrigger className="text-base text-gray-600 font-semibold py-1 px-2 hover:bg-blue-50 rounded-md transition-colors outline-none">
+            Textos
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem asChild>
+              <Link href="inverter-texto" className="w-full h-full">
+                Inverter Texto
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="maiuscula-minuscula" className="w-full h-full">
+                Converter Maiúscula/Minúscula
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="encontrar-alterar" className="w-full h-full">
+                Encontrar e Alterar Texto
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+        <DropdownMenu>
+          <DropdownMenuTrigger className="text-base text-gray-600 font-semibold py-1 px-2 hover:bg-blue-50 rounded-md transition-colors outline-none">
+            Números
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem asChild>
+              <Link href="regra-de-tres" className="w-full h-full">
+                Regra de Três
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="bhaskara" className="w-full h-full">
+                Fórmula de Bhaskara
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="porcentagem" className="w-full h-full">
+                Porcentagens
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </nav>
 
       {/* MOBILE */}
@@ -59,27 +97,50 @@ export default function Header() {
           <X className="text-gray-600 cursor-pointer" />
         </button>
         <nav className="mt-10 space-y-4 flex flex-col">
-          <Link
-            href="/inverter-texto"
-            className="text-base text-gray-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Inverter Texto
-          </Link>
-          <Link
-            href="/maiuscula-minuscula"
-            className="text-base text-gray-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Converter Maiúscula/Minúscula
-          </Link>
-          <Link
-            href="/encontrar-alterar"
-            className="text-base text-gray-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Encontrar e Alterar Texto
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-base text-gray-600 font-semibold py-1 px-2 hover:bg-blue-50 rounded-md transition-colors outline-none text-start">
+              Textos
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem asChild onClick={() => setIsOpen(false)}>
+                <Link href="inverter-texto" className="w-full h-full">
+                  Inverter Texto
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild onClick={() => setIsOpen(false)}>
+                <Link href="maiuscula-minuscula" className="w-full h-full">
+                  Converter Maiúscula/Minúscula
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild onClick={() => setIsOpen(false)}>
+                <Link href="encontrar-alterar" className="w-full h-full">
+                  Encontrar e Alterar Texto
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-base text-gray-600 font-semibold py-1 px-2 hover:bg-blue-50 rounded-md transition-colors outline-none text-start">
+              Números
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem asChild onClick={() => setIsOpen(false)}>
+                <Link href="regra-de-tres" className="w-full h-full">
+                  Regra de Três
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild onClick={() => setIsOpen(false)}>
+                <Link href="bhaskara" className="w-full h-full">
+                  Fórmula de Bhaskara
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild onClick={() => setIsOpen(false)}>
+                <Link href="porcentagem" className="w-full h-full">
+                  Porcentagens
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
       </div>
     </header>
